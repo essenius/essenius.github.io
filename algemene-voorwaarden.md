@@ -2,10 +2,35 @@
 title: Algemene Voorwaarden
 layout: page
 ---
+<style>
+.numbered-document { counter-reset: chapter; }
 
-<link rel="stylesheet" href="{{ '/assets/css/numbered.css' | relative_url }}">
+.numbered-document h2 { counter-reset: article; }
 
-<div class="numbered-document">
+.numbered-document h2::before {
+  counter-increment: chapter;
+  content: counter(chapter) ". ";
+}
+
+.numbered-document h3 { counter-reset: subarticle; font-weight: normal; font-size: 1em; }
+
+.numbered-document h3::before {
+  counter-increment: article;
+  content: counter(chapter) "." counter(article) ". ";
+  font-weight: normal;
+}
+
+.numbered-document h4 { font-weight: normal; font-size: 0.95em; }
+
+.numbered-document h4::before {
+  counter-increment: subarticle;
+  content: counter(chapter) "." counter(article) "." counter(subarticle) ". ";
+  font-weight: normal;
+}
+</style>
+
+{:.numbered-document}
+
 # Algemene Voorwaarden
 
 ## Definities
