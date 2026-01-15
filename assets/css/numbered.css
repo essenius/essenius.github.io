@@ -3,48 +3,17 @@
   counter-reset: chapter;
 }
 
-/* Page title (#) — no numbering */
-.numbered-document h1 {
-  counter-reset: chapter;
-}
-
 /* Chapter (##) */
-.numbered-document h2 {
-  counter-reset: article;
-}
+.numbered-document h2 { counter-reset: article; }
 
-.numbered-document h2::before {
-  counter-increment: chapter;
-  content: counter(chapter) ". ";
-}
+.numbered-document h2::before { counter-increment: chapter; content: counter(chapter) ". "; }
 
 /* Article (###) */
-.numbered-document h3 {
-  counter-reset: subarticle;
+.numbered-document h3 { counter-reset: subarticle; font-weight: normal; font-size: 1em; }
 
-  font-weight: normal;     /* remove bold */
-  font-size: 1em;          /* normal text size */
-  margin-top: 0.75em;      /* optional spacing */
-  margin-bottom: 0.5em;    /* optional spacing */
-}
-
-.numbered-document h3::before {
-  counter-increment: article;
-  content: counter(chapter) "." counter(article) ". ";
-  font-weight: normal;   /* number same weight as text */
-  margin-right: 0.25em;
-}
+.numbered-document h3::before { counter-increment: article; content: counter(chapter) "." counter(article) ". ";   font-weight: normal; }
 
 /* Sub-article (####) — normal font, smaller */
-.numbered-document h4 {
-  font-weight: normal;
-  font-size: 0.95em;     /* slightly smaller than body */
-  margin-top: 0.5em;
-  margin-bottom: 0.25em;
-}
-.numbered-document h4::before {
-  counter-increment: subarticle;
-  content: counter(chapter) "." counter(article) "." counter(subarticle) ". ";
-  font-weight: normal;
-  margin-right: 0.25em;
-}
+.numbered-document h4 { font-weight: normal; font-size: 0.95em; }
+
+.numbered-document h4::before { counter-increment: subarticle; content: counter(chapter) "." counter(article) "." counter(subarticle) ". ";   font-weight: normal; }

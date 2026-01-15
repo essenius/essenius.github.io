@@ -1,8 +1,11 @@
 ---
-layout: numbered
 title: Algemene Voorwaarden
+layout: page
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/numbered.css' | relative_url }}">
+
+<div class="numbered-document">
 # Algemene Voorwaarden
 
 ## Definities
@@ -134,3 +137,4 @@ In deze algemene voorwaarden wordt verstaan onder:
 ### Partijen zullen bij geschillen in eerste instantie trachten tot een minnelijke oplossing te komen, bijvoorbeeld door middel van overleg of mediatie, alvorens het geschil aan de rechter voor te leggen
 
 ### Geschillen zullen bij uitsluiting worden voorgelegd aan de bevoegde rechter van het arrondissement waarin Opdrachtnemer is gevestigd, tenzij dwingend recht anders voorschrijft.
+</div>
