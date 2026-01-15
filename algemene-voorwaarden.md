@@ -3,9 +3,8 @@ title: Algemene Voorwaarden
 layout: page
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/numbered.css' | relative_url }}">
 
-<!--<style>
+<style>
 .numbered-document { counter-reset: chapter; }
 
 .numbered-document h2 { counter-reset: article; }
@@ -30,7 +29,7 @@ layout: page
   content: counter(chapter) "." counter(article) "." counter(subarticle) ". ";
   font-weight: normal;
 }
-</style> -->
+</style>
 
 ::: numbered-document
 
