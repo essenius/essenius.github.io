@@ -1,0 +1,30 @@
+/* Reset counters at page level */
+.numbered-document {
+  counter-reset: chapter;
+}
+
+/* Chapter (h1) */
+.numbered-document h2 {
+  counter-reset: section;
+}
+
+.numbered-document h2::before {
+  counter-increment: chapter;
+  content: counter(chapter) ". ";
+}
+
+/* Clause (h2) */
+.numbered-document h3 {
+  counter-reset: subsection;
+}
+
+.numbered-document h3::before {
+  counter-increment: section;
+  content: counter(chapter) "." counter(section) ". ";
+}
+
+/* Sub-clause (h3) */
+.numbered-document h4::before {
+  counter-increment: subsection;
+  content: counter(chapter) "." counter(section) "." counter(subsection) ". ";
+}
