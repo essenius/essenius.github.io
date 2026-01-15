@@ -3,7 +3,7 @@
   counter-reset: chapter;
 }
 
-/* Chapter (h1) */
+/* Chapter (h2) */
 .numbered-document h2 {
   counter-reset: section;
 }
@@ -13,18 +13,18 @@
   content: counter(chapter) ". ";
 }
 
-/* Clause (h2) */
+/* Article (h3) */
 .numbered-document h3 {
-  counter-reset: subsection;
+  counter-reset: subarticle;
 }
 
 .numbered-document h3::before {
-  counter-increment: section;
-  content: counter(chapter) "." counter(section) ". ";
+  counter-increment: article;
+  content: counter(chapter) "." counter(article) ". ";
 }
 
-/* Sub-clause (h3) */
+/* Sub-article (h4) */
 .numbered-document h4::before {
-  counter-increment: subsection;
-  content: counter(chapter) "." counter(section) "." counter(subsection) ". ";
+  counter-increment: subarticle;
+  content: counter(chapter) "." counter(article) "." counter(subarticle) ". ";
 }
