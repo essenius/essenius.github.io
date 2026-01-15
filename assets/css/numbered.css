@@ -1,17 +1,43 @@
 /* Reset counters at page level */
-.numbered-document {   counter-reset: chapter; }
+.numbered-document {   
+  counter-reset: chapter; 
+}
 
 /* Chapter (##) */
-.numbered-document h2 { counter-reset: article; }
+.numbered-document h2 { 
+  counter-reset: article; 
+  margin-left: 0;
+}
 
-.numbered-document h2::before { counter-increment: chapter; content: counter(chapter) ". "; }
+.numbered-document h2::before { 
+  counter-increment: chapter; 
+  content: counter(chapter) ". "; 
+}
 
 /* Article (###) */
-.numbered-document h3 { counter-reset: subarticle; font-weight: normal; font-size: 1em; }
+.numbered-document h3 { 
+  counter-reset: subarticle; 
+  font-weight: normal; 
+  font-size: 1em; 
+  margin-left: 1.5em;       /* indent the text */
+  text-indent: -1.5em;      /* pull the number back */
+}
 
-.numbered-document h3::before { counter-increment: article; content: counter(chapter) "." counter(article) ". ";   font-weight: normal; }
+.numbered-document h3::before { 
+  counter-increment: article; 
+  content: counter(chapter) "." counter(article) ". "; 
+  font-weight: normal; }
 
 /* Sub-article (####) — normal font, smaller */
-.numbered-document h4 { font-weight: normal; font-size: 0.95em; }
+.numbered-document h4 { 
+  font-weight: normal; 
+  font-size: 0.95em;
+  margin-left: 2em;          /* indent the text */
+  text-indent: -1.5em;       /* pull the number back */
+}
 
-.numbered-document h4::before { counter-increment: subarticle; content: counter(chapter) "." counter(article) "." counter(subarticle) ". ";   font-weight: normal; }
+.numbered-document h4::before {
+  counter-increment: subarticle;
+  content: counter(chapter) "." counter(article) "." counter(subarticle) ". ";
+  font-weight: normal;
+}
