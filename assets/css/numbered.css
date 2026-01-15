@@ -1,7 +1,5 @@
 /* Reset counters at page level */
-.numbered-document {
-  counter-reset: chapter;
-}
+.numbered-document {   counter-reset: chapter; }
 
 /* Chapter (##) */
 .numbered-document h2 { counter-reset: article; }
