@@ -3,7 +3,7 @@
   counter-reset: chapter; 
 }
 
-/* Chapter (##) */
+/* Chapter (H2) */
 .numbered-document h2 { 
   counter-reset: article; 
   margin-left: 0;
@@ -12,32 +12,42 @@
 .numbered-document h2::before { 
   counter-increment: chapter; 
   content: counter(chapter) ". "; 
+  font-weight: bold;
 }
 
-/* Article (###) */
+/* Article (H3) — hanging indent for multi-line */
 .numbered-document h3 { 
   counter-reset: subarticle; 
   font-weight: normal; 
   font-size: 1em; 
-  margin-left: 1.5em;       /* indent the text */
-  text-indent: -1.5em;      /* pull the number back */
+  position: relative;
+  padding-left: 3em; /* space for the number */
 }
 
 .numbered-document h3::before { 
   counter-increment: article; 
   content: counter(chapter) "." counter(article) ". "; 
-  font-weight: normal; }
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  width: 3em;
+  text-align: right;
+}
 
-/* Sub-article (####) — normal font, smaller */
+/* Sub-article (H4) — smaller hanging indent for multi-line */
 .numbered-document h4 { 
   font-weight: normal; 
   font-size: 0.95em;
-  margin-left: 2em;          /* indent the text */
-  text-indent: -1.5em;       /* pull the number back */
+  position: relative;
+  padding-left: 4em; /* space for the number */
 }
 
 .numbered-document h4::before {
   counter-increment: subarticle;
   content: counter(chapter) "." counter(article) "." counter(subarticle) ". ";
-  font-weight: normal;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  width: 4em;
+  text-align: right;
 }
