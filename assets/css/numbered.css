@@ -3,7 +3,12 @@
   counter-reset: chapter;
 }
 
-/* Chapter (h2) */
+/* Page title (#) — no numbering */
+.numbered-document h1 {
+  counter-reset: chapter;
+}
+
+/* Chapter (##) */
 .numbered-document h2 {
   counter-reset: section;
 }
@@ -13,7 +18,7 @@
   content: counter(chapter) ". ";
 }
 
-/* Article (h3) */
+/* Article (###) */
 .numbered-document h3 {
   counter-reset: subarticle;
 }
@@ -23,7 +28,7 @@
   content: counter(chapter) "." counter(article) ". ";
 }
 
-/* Sub-article (h4) */
+/* Sub-article (####) */
 .numbered-document h4::before {
   counter-increment: subarticle;
   content: counter(chapter) "." counter(article) "." counter(subarticle) ". ";
