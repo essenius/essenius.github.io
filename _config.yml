@@ -1,4 +1,6 @@
-theme: Slate
+remote_theme: pages-themes/slate@v0.2.0
+plugins:
+- jekyll-remote-theme
 lsi: false
 safe: true
 source: /
@@ -9,3 +11,6 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+
+title: Rik's GitHub Pages Site
+description: trying out GitHub Pages features
