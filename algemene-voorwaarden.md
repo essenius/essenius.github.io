@@ -3,7 +3,6 @@ title: Algemene Voorwaarden
 layout: page
 ---
 
-
 <style>
 .numbered-document { counter-reset: chapter; }
 
@@ -31,7 +30,7 @@ layout: page
 }
 </style>
 
-::: numbered-document
+<div class="numbered-document" markdown="1">
 
 # Algemene Voorwaarden
 
@@ -163,4 +162,4 @@ In deze algemene voorwaarden wordt verstaan onder:
 
 ### Geschillen zullen bij uitsluiting worden voorgelegd aan de bevoegde rechter van het arrondissement waarin Opdrachtnemer is gevestigd, tenzij dwingend recht anders voorschrijft.
 
-:::
+</div>
